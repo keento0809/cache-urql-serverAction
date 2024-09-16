@@ -7,7 +7,7 @@ export async function fetchProduct(params: string): Promise<Product> {
     throw new Error(`failed to fetch the product`);
   }
 
-  const product = (await result.json()) as Product;
+  const product: Product = await result.json();
 
   return product;
 }
