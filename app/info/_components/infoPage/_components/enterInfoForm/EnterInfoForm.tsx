@@ -1,10 +1,18 @@
 import { FC } from "react";
-import { useEnterInfoForm } from "./_hooks/useEnterInfoForm";
 import { getFormProps, getInputProps } from "@conform-to/react";
+import type { FormFieldsType, FormType } from "../../_types/infoPage";
 
-export const EnterInfoForm: FC = () => {
-  const { form, fields, action } = useEnterInfoForm();
+type EnterInfoFormProps = {
+  form: FormType;
+  fields: FormFieldsType;
+  action: (payload: FormData) => void;
+};
 
+export const EnterInfoForm: FC<EnterInfoFormProps> = ({
+  form,
+  fields,
+  action,
+}) => {
   return (
     <form
       action={action}
