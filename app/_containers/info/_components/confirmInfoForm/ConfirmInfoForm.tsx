@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { useConfirmInfoForm } from "./_hooks/useConfirmInfoForm";
-import { FormFieldsType } from "../../_types/infoPage";
+import { FormFieldsType } from "../../_types/info";
 
 type ConfirmInfoFormProps = {
   fields: FormFieldsType;

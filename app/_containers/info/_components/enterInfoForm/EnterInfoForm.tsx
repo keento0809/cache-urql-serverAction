@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { getFormProps, getInputProps } from "@conform-to/react";
-import type { FormFieldsType, FormType } from "../../_types/infoPage";
+import { FormFieldsType, FormType } from "../../_types/info";
 
 type EnterInfoFormProps = {
   form: FormType;

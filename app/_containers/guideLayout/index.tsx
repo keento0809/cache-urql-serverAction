@@ -1,3 +1,3 @@
-import { GuideLayoutContainer } from "./GuideLayoutContainer";
+import { GuideLayoutContainer } from "./container";
 
 export { GuideLayoutContainer };

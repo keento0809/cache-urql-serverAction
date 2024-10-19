@@ -1,5 +1,6 @@
-import { PostsPresentational } from "./presentation";
+import { PropsWithChildren } from "react";
+import { PostsPresentation } from "./presentation";
 
-export async function PostsContainer() {
-  return <PostsPresentational />;
+export async function PostsContainer({ children }: PropsWithChildren) {
+  return <PostsPresentation>{children}</PostsPresentation>;
 }

@@ -1,12 +1,12 @@
 "use client";
 
-import { FC } from "react";
-import { useInfoPage } from "./_hooks/useInfoPage";
+import { PropsWithChildren } from "react";
 import { EnterInfoForm } from "./_components/enterInfoForm/EnterInfoForm";
 import { ConfirmInfoForm } from "./_components/confirmInfoForm/ConfirmInfoForm";
+import { useInfo } from "./_hooks/useInfo";
 
-export const InfoPage: FC = () => {
-  const { formParams, form, fields, action } = useInfoPage();
+export const InfoPresentation = ({ children }: PropsWithChildren) => {
+  const { formParams, form, fields, action } = useInfo();
 
   return (
     <div className="py-8">
@@ -15,6 +15,7 @@ export const InfoPage: FC = () => {
       ) : (
         <ConfirmInfoForm fields={fields} />
       )}
+      {children}
     </div>
   );
 };

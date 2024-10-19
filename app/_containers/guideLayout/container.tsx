@@ -1,5 +1,5 @@
 import { cookies } from "next/headers";
-import { GuideLayoutPresentation } from "./GuideLayoutPresentation";
+import { GuideLayoutPresentation } from "./presentation";
 import { PropsWithChildren } from "react";
 
 export const GuideLayoutContainer = ({ children }: PropsWithChildren) => {

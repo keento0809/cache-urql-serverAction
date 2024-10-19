@@ -1,9 +1,6 @@
+import { PropsWithChildren } from "react";
 import { HomePresentation } from "./presentation";
 
-export const HomeContainer = async () => {
-  return (
-    <HomePresentation>
-      <div>aaaaa children component</div>
-    </HomePresentation>
-  );
+export const HomeContainer = async ({ children }: PropsWithChildren) => {
+  return <HomePresentation>{children}</HomePresentation>;
 };
