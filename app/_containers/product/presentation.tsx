@@ -1,9 +1,15 @@
-import { Product } from "@/app/products/[slug]/_types/productSlug";
+import { Product } from "@/app/_containers/product/_types/product";
 import Link from "next/link";
+import { PropsWithChildren } from "react";
 
-export const ProductPresentation = ({ product }: { product: Product }) => {
+type ProductPresentationProps = PropsWithChildren<{ product: Product }>;
+
+export const ProductPresentation = ({
+  product,
+  children,
+}: ProductPresentationProps) => {
   return (
-    <div className="p-6">
+    <div className="p-6 w-4/5 mx-auto">
       <p className="text-2xl font-semibold py-2">{product.title}</p>
       <p className="py-2 text-md text-slate-600">{product.description}</p>
       <div className="py-8 flex justify-center items-center">
@@ -15,6 +21,7 @@ export const ProductPresentation = ({ product }: { product: Product }) => {
           Back
         </Link>
       </div>
+      {children}
     </div>
   );
 };

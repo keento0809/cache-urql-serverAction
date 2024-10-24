@@ -1,10 +1,8 @@
-import { Product } from "../products/[slug]/_types/productSlug";
+import { Product } from "../../product/_types/product";
 
 const baseURL = "https://fakestoreapi.com";
 
-export async function fetchProductWithGenerics(
-  params: string
-): Promise<Product> {
+export async function fetcher(params: string): Promise<Product> {
   const result = await fetch(`${baseURL}/products/${params}`);
 
   if (!result.ok) {

@@ -1,7 +1,7 @@
 import { getClient } from "@/api/graphql/client";
-import { QUERY_FILMS } from "@/app/page";
+import { QUERY_FILMS } from "@/app/_graphql/queries/queries";
 
-export async function getFilms() {
+export async function fetcher() {
   const client = getClient();
   const result = await client.query(QUERY_FILMS, {
     next: { revalidate: 0 },

@@ -1,11 +1,11 @@
-import { fetchProduct } from "@/app/products/[slug]/fetcher";
+import { fetcher } from "@/app/_containers/product/_fetchers/product";
 
 type ItemProps = {
   params: string;
 };
 
 export const Item = async ({ params }: ItemProps) => {
-  const product = await fetchProduct(params);
+  const product = await fetcher(params);
 
   if (!product) return <div className="">Failed to fetch item...</div>;
 

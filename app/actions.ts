@@ -1,8 +1,8 @@
 "use server";
 
 import { getClient } from "@/api/graphql/client";
-import { QUERY_FILMS } from "./page";
 import { redirect } from "next/navigation";
+import { QUERY_FILMS } from "./_graphql/queries/queries";
 
 export async function actWithUseServer() {
   const client = getClient();

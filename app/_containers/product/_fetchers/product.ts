@@ -1,6 +1,6 @@
-import { Product } from "./_types/productSlug";
+import { Product } from "../_types/product";
 
-export async function fetchProduct(params: string): Promise<Product> {
+export async function fetcher(params: string): Promise<Product> {
   const result = await fetch(`https://fakestoreapi.com/products/${params}`);
 
   if (!result.ok) {
